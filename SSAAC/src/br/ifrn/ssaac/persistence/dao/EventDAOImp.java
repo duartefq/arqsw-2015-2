@@ -25,8 +25,9 @@ public class EventDAOImp implements EventDAO {
 			while (rs.next()) {
 				String nome = rs.getString("nome");
 				String local = rs.getString("local");
+				String date = rs.getString("date");
 
-				return new Event(nome, local);
+				return new Event(nome, local, date);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

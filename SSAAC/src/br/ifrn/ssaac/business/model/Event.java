@@ -4,9 +4,14 @@ public class Event {
 	private long id;
 	private String nome;
 	private String local;
+	private String date;
 	
-	public Event() {
+	public Event(String nome, String local, String date) {
 		super();
+
+		this.nome = nome;
+		this.local = local;
+		this.date = date;
 	}
 
 	public long getId() {
@@ -25,11 +30,19 @@ public class Event {
 		this.nome = nome;
 	}
 
-	public long getLocal() {
+	public String getLocal() {
 		return local;
 	}
 
 	public void setLocal(String local) {
 		this.local = local;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 }
